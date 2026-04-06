@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Roboto_Mono, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,7 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="es"
       className={`${inter.variable} ${robotoMono.variable} ${barlowCondensed.variable}`}
     >
-      <body className="font-sans bg-[#FAFAFA] antialiased">{children}</body>
+      <body className="font-sans antialiased bg-[#FAFAFA]">
+        {children}
+        <FloatingWhatsApp />
+      </body>
     </html>
   )
 }
