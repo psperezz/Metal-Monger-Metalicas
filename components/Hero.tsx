@@ -171,7 +171,7 @@ export default function Hero() {
         </div>
 
         {/* Hero headline — left aligned */}
-        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-2 md:mt-4 pb-24 md:pb-32">
+        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-2 md:mt-4 pb-20 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom accent bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-brand-light to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-brand-light to-transparent z-10 translate-y-0" />
     </section>
   )
 }
