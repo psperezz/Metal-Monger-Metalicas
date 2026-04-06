@@ -18,11 +18,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <svg viewBox="0 0 40 40" fill="none" className="w-9 h-9">
-                <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#FF5C00" />
-                <text x="20" y="26" textAnchor="middle" fill="white" fontSize="11"
-                  fontWeight="900" fontFamily="system-ui">M3</text>
-              </svg>
+              <img src="/logo-m3-icon.png" alt="M3" className="h-9 w-auto object-contain" />
               <div>
                 <p className="text-xs font-black tracking-[0.15em] uppercase">Metal·Monger</p>
                 <p className="text-[9px] font-mono text-white/40 tracking-widest uppercase">Metálicas</p>
@@ -39,7 +35,7 @@ export default function Footer() {
               Navegación
             </p>
             <ul className="space-y-2">
-              {['Inicio', 'Servicios', 'Proyectos', 'Nosotros'].map((l) => (
+              {['Inicio', 'Servicios', 'Alquiler', 'Nosotros'].map((l) => (
                 <li key={l}>
                   <a href={`#${l.toLowerCase()}`}
                     className="text-xs text-white/50 hover:text-white font-mono tracking-widest uppercase transition-colors">
