@@ -161,26 +161,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="flex items-center gap-4"
           >
-            <svg viewBox="0 0 70 80" fill="none" className="w-16 h-20">
-              <polygon points="35,4 64,20 64,60 35,76 6,60 6,20" fill="#FF5C00" />
-              <text x="35" y="52" textAnchor="middle" fill="white" fontSize="22"
-                fontWeight="900" fontFamily="system-ui">M3</text>
-            </svg>
-            <div>
-              <div className="border-l-[3px] border-ink-DEFAULT pl-3">
-                <p className="text-2xl md:text-3xl font-black tracking-[0.08em] text-ink-DEFAULT leading-none uppercase">
-                  Metal·Monger
-                </p>
-                <p className="text-lg md:text-xl font-black tracking-[0.12em] text-brand leading-none uppercase mt-0.5">
-                  Metálicas
-                </p>
-              </div>
-              <p className="font-mono text-[9px] tracking-[0.25em] text-ink-muted mt-2 uppercase">
-                M3 /// Construcción &amp; Mobiliario Metálico
-              </p>
-            </div>
+            <img
+              src="/logo-m3.png"
+              alt="M3 Metal·Monger Metálicas"
+              className="h-28 md:h-40 w-auto object-contain drop-shadow-lg"
+            />
           </motion.div>
         </div>
 

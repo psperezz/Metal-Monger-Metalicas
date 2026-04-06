@@ -41,34 +41,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2 shrink-0">
-            <div className="relative w-9 h-9">
-              <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-                <polygon
-                  points="20,2 36,11 36,29 20,38 4,29 4,11"
-                  fill="#FF5C00"
-                />
-                <text
-                  x="20"
-                  y="26"
-                  textAnchor="middle"
-                  fill="white"
-                  fontSize="14"
-                  fontWeight="900"
-                  fontFamily="system-ui"
-                >
-                  M3
-                </text>
-              </svg>
-            </div>
-            <div className="hidden sm:block leading-none">
-              <p className="text-[11px] font-black tracking-[0.15em] text-ink-DEFAULT uppercase">
-                Metal·Monger
-              </p>
-              <p className="text-[8px] font-mono text-ink-muted tracking-widest uppercase">
-                Metálicas
-              </p>
-            </div>
+          <div className="flex items-center shrink-0">
+            <img
+              src="/logo-m3.png"
+              alt="M3 Metal·Monger Metálicas"
+              className="h-9 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop nav */}
