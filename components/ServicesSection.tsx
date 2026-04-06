@@ -38,7 +38,6 @@ export default function ServicesSection() {
     ? productos
     : productos.filter((p) => p.categoria === filtro)
 
-  const conFoto = productos.filter((p) => p.imagen_url)
 
   return (
     <>
@@ -121,73 +120,6 @@ export default function ServicesSection() {
         </div>
       </section>
 
-      {/* ── Proyectos ── only rendered when at least one product has a photo */}
-      {(loading || conFoto.length > 0) && (
-        <section id="proyectos" className="py-20 bg-ink-DEFAULT">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center gap-4 mb-10"
-            >
-              <h2 className="font-black text-2xl tracking-[0.2em] uppercase text-white whitespace-nowrap">
-                Proyectos
-              </h2>
-              <div className="flex-1 h-px bg-white/10" />
-              <span className="font-mono text-[9px] tracking-[0.3em] text-white/30 uppercase whitespace-nowrap">
-                M3 // Portfolio
-              </span>
-            </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {loading ? (
-                Array.from({ length: 3 }).map((_, i) => (
-                  <div key={i} className="rounded-xl bg-white/5 aspect-[4/3] animate-skeleton" />
-                ))
-              ) : (
-                <AnimatePresence mode="popLayout">
-                  {conFoto.map((p, i) => (
-                    <motion.div
-                      key={`proj-${p.id}`}
-                      layout
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.35, delay: i * 0.08 }}
-                      className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-ink-soft border border-white/10"
-                    >
-                      <img
-                        src={p.imagen_url!}
-                        alt={p.nombre}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                        <span className="font-mono text-[9px] text-brand uppercase tracking-widest">
-                          {p.categoria}
-                        </span>
-                        <h3 className="font-black text-white text-sm uppercase mt-1 tracking-wide">
-                          {p.nombre}
-                        </h3>
-                        {p.material && (
-                          <p className="font-mono text-[9px] text-white/40 mt-1 uppercase tracking-widest">
-                            MAT: {p.material}
-                          </p>
-                        )}
-                      </div>
-                      <div className="absolute top-3 right-3 z-20 font-mono text-[8px] text-white/30 tracking-widest">
-                        SERIAL: M3-{String(i + 1).padStart(3, '0')}
-                      </div>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              )}
-            </div>
-          </div>
-        </section>
-      )}
     </>
   )
 }
