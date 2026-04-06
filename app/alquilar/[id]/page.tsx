@@ -95,6 +95,16 @@ export default function AlquilarHerramientaPage() {
       if (insertError) throw insertError
 
       setSent(true)
+
+      // Open WhatsApp with prefilled message
+      const text = encodeURIComponent(
+        `Hola, acabo de solicitar el alquiler de: *${herramienta.nombre}*\n\n` +
+        `📅 *Fechas:* del ${form.fecha_inicio} al ${form.fecha_fin}\n` +
+        `👤 *A nombre de:* ${form.cliente_nombre}\n\n` +
+        `Por favor confirma mi reserva.`
+      )
+      window.open(`https://wa.me/593979498966?text=${text}`, '_blank')
+
       setForm(EMPTY_FORM)
     } catch (err: any) {
       setError(err?.message || 'No se pudo registrar la reserva.')
