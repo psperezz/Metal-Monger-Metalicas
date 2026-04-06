@@ -165,13 +165,13 @@ export default function Hero() {
             <img
               src="/logo-m3.png"
               alt="M3 Metal·Monger Metálicas"
-              className="max-w-[50%] w-auto object-contain drop-shadow-2xl mx-auto"
+              className="max-w-[40%] w-auto object-contain drop-shadow-2xl mx-auto"
             />
           </motion.div>
         </div>
 
         {/* Hero headline — left aligned */}
-        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 -mt-8 md:-mt-16 pb-20 md:pb-32">
+        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-4 md:mt-8 pb-20 md:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
