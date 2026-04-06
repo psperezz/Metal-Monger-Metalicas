@@ -239,7 +239,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom accent bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-brand-light to-transparent z-10 translate-y-0" />
+      <div className="fixed bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand via-brand-light to-transparent z-50" />
     </section>
   )
 }
