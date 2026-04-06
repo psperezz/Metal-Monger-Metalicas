@@ -156,7 +156,7 @@ export default function Hero() {
         <div className="h-16" />
 
         {/* Logo cluster — centered */}
-        <div className="flex justify-center mt-12 md:mt-16">
+        <div className="flex justify-center mt-2 md:mt-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -165,13 +165,13 @@ export default function Hero() {
             <img
               src="/logo-m3.png"
               alt="M3 Metal·Monger Metálicas"
-              className="h-[22rem] sm:h-[26rem] md:h-[30rem] lg:h-[36rem] w-auto object-contain drop-shadow-2xl"
+              className="h-[44rem] sm:h-[52rem] md:h-[60rem] lg:h-[72rem] w-auto object-contain drop-shadow-2xl"
             />
           </motion.div>
         </div>
 
         {/* Hero headline — left aligned */}
-        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-8 md:mt-0 pb-20 md:pb-32">
+        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 -mt-8 md:-mt-16 pb-20 md:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
