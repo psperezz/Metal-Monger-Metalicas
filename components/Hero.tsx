@@ -171,7 +171,7 @@ export default function Hero() {
         </div>
 
         {/* Hero headline — left aligned */}
-        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-2 md:mt-4 pb-16 md:pb-24">
+        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-2 md:mt-4 pb-24 md:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
