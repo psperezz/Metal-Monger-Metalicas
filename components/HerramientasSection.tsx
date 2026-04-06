@@ -43,7 +43,7 @@ export default function HerramientasSection() {
     : herramientas.filter((h) => h.categoria === filtro)
 
   return (
-    <section id="alquiler" className="py-20 bg-ink-DEFAULT">
+    <section id="alquiler" className="py-20 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -53,11 +53,11 @@ export default function HerramientasSection() {
           transition={{ duration: 0.5 }}
           className="flex items-center gap-4 mb-10"
         >
-          <h2 className="font-black text-2xl tracking-[0.2em] uppercase text-white whitespace-nowrap">
+          <h2 className="font-black text-2xl tracking-[0.2em] uppercase text-ink-DEFAULT whitespace-nowrap">
             Alquiler
           </h2>
-          <div className="flex-1 h-px bg-white/10" />
-          <span className="font-mono text-[9px] tracking-[0.3em] text-white/30 uppercase whitespace-nowrap">
+          <div className="flex-1 h-px bg-ink-border" />
+          <span className="font-mono text-[9px] tracking-[0.3em] text-ink-muted uppercase whitespace-nowrap">
             M3 // Herramientas
           </span>
         </motion.div>
@@ -66,7 +66,7 @@ export default function HerramientasSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-white/60 text-sm max-w-xl mb-10"
+          className="text-ink-muted text-sm max-w-xl mb-10"
         >
           Alquila herramientas industriales de calidad profesional. 
           Verifica disponibilidad en tiempo real y reserva por día.
@@ -88,7 +88,7 @@ export default function HerramientasSection() {
               className={`px-5 py-1.5 rounded-full text-[11px] font-black tracking-widest uppercase border transition-all duration-200 ${
                 filtro === f
                   ? 'bg-brand text-white border-brand shadow-sm shadow-brand/30'
-                  : 'bg-white/5 text-white/60 border-white/10 hover:border-brand hover:text-brand'
+                  : 'bg-white text-ink-muted border-ink-border hover:border-brand hover:text-brand'
               }`}
             >
               {f}
@@ -110,7 +110,7 @@ export default function HerramientasSection() {
           ) : (
             filtradas.length === 0 ? (
               <div className="col-span-3 text-center py-16">
-                <p className="font-mono text-sm text-white/40">
+                <p className="font-mono text-sm text-ink-muted">
                   // No hay herramientas en esta categoría
                 </p>
               </div>
