@@ -165,7 +165,7 @@ export default function Hero() {
             <img
               src="/logo-m3.png"
               alt="M3 Metal·Monger Metálicas"
-              className="h-28 md:h-40 w-auto object-contain drop-shadow-lg"
+              className="h-36 sm:h-44 md:h-56 lg:h-64 w-auto object-contain drop-shadow-2xl"
             />
           </motion.div>
         </div>
