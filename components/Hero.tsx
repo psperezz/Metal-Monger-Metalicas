@@ -130,7 +130,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative h-[90vh] bg-white overflow-hidden flex flex-col"
+      className="relative h-screen bg-white overflow-hidden flex flex-col"
     >
       {/* Particle canvas — full section */}
       <canvas
@@ -156,7 +156,7 @@ export default function Hero() {
         <div className="h-16" />
 
         {/* Logo cluster — centered */}
-        <div className="flex justify-center mt-2 md:mt-4">
+        <div className="flex justify-center mt-1 md:mt-2">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -165,19 +165,19 @@ export default function Hero() {
             <img
               src="/logo-m3.png"
               alt="M3 Metal·Monger Metálicas"
-              className="max-w-[36%] w-auto object-contain drop-shadow-2xl mx-auto"
+              className="max-w-[32%] w-auto object-contain drop-shadow-2xl mx-auto"
             />
           </motion.div>
         </div>
 
         {/* Hero headline — left aligned */}
-        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-2 md:mt-4 pb-20 md:pb-28">
+        <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-0 md:mt-2 pb-28 md:pb-36">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           >
-            <h1 className="font-condensed font-black text-[clamp(2.4rem,7vw,6.2rem)] leading-[0.9] tracking-tight text-ink-DEFAULT uppercase text-balance">
+            <h1 className="font-condensed font-black text-[clamp(2rem,6vw,5.5rem)] leading-[0.9] tracking-tight text-ink-DEFAULT uppercase text-balance">
               Soluciones
               <br />
               Integrales
@@ -191,7 +191,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-4 text-sm md:text-base text-ink-soft max-w-xl leading-relaxed"
+              className="mt-3 text-sm md:text-base text-ink-soft max-w-xl leading-relaxed"
             >
               Diseño, Fabricación y Ejecución de Proyectos de Metalurgia de
               Alta Precisión para Espacios Comerciales y Residenciales.
@@ -202,7 +202,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
-              className="mt-6 flex flex-wrap gap-3"
+              className="mt-5 flex flex-wrap gap-3"
             >
               <button
                 onClick={() => document.querySelector('#servicios')?.scrollIntoView({ behavior: 'smooth' })}
