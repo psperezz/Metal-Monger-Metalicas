@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center shrink-0">
             <img
-              src="/logo-m3.png"
+              src="/logo-m3-icon.png"
               alt="M3 Metal·Monger Metálicas"
               className="h-9 w-auto object-contain"
             />
