@@ -42,7 +42,7 @@ export default function ServicesSection() {
   return (
     <>
       {/* ── Servicios ── */}
-      <section id="servicios" className="py-20 bg-[#FAFAFA]">
+      <section id="servicios" className="pt-16 pb-20 bg-[#FAFAFA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section header */}
           <motion.div
