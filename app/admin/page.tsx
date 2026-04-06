@@ -7,7 +7,7 @@ import type { Producto, ProductoInsert } from '@/lib/types'
 import { CATEGORIAS } from '@/lib/types'
 import {
   Plus, Pencil, Trash2, LogOut, X, Save, Loader2,
-  Package, AlertCircle, CheckCircle2,
+  Package, AlertCircle, CheckCircle2, Hammer
 } from 'lucide-react'
 
 const EMPTY_FORM: ProductoInsert = {
@@ -205,13 +205,22 @@ export default function AdminPage() {
               Catálogo de Productos
             </h2>
           </div>
-          <button
-            onClick={openCreate}
-            className="flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white text-xs font-black tracking-widest rounded-full transition-all uppercase"
-          >
-            <Plus size={13} />
-            Nuevo Producto
-          </button>
+          <div className="flex items-center gap-3">
+            <a
+              href="/admin/herramientas"
+              className="flex items-center gap-1.5 px-4 py-2 border-2 border-brand text-brand hover:bg-brand-muted text-xs font-black tracking-widest rounded-full transition-all uppercase"
+            >
+              <Hammer size={13} />
+              Panel Alquiler
+            </a>
+            <button
+              onClick={openCreate}
+              className="flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white text-xs font-black tracking-widest rounded-full transition-all uppercase"
+            >
+              <Plus size={13} />
+              Nuevo Producto
+            </button>
+          </div>
         </div>
 
         {/* Table */}
